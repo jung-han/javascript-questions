@@ -1041,7 +1041,7 @@ FYI: there are only 7 built-in types: `null`, `undefined`, `boolean`, `number`, 
 
 ---
 
-###### 35. Which of these values are falsy?
+###### 35. 이 중에 어떤게 falsy 값 일까?
 
 ```javascript
 0;

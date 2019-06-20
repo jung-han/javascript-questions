@@ -11,7 +11,7 @@ The answers are in the collapsed sections below the questions, simply click on t
 [Western Balkan](./README-bs.md)  
 [Deutsch](./README-de_DE.md)  
 [Tiếng Việt](./README-vi.md)  
-[한국어](./README-ko.md)  
+[한국어](./README-ko-KR.md)  
 
 ---
 
