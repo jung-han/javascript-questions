@@ -303,7 +303,7 @@ In order to avoid this, we can use `"use strict"`. This makes sure that you have
 
 ---
 
-###### 10. What happens when we do this?
+###### 10. 이 코드를 실행하면 어떤 일이 발생하는가?
 
 ```javascript
 function bark() {
@@ -407,7 +407,7 @@ We said that `this.firstName` equals `"Sarah"` and `this.lastName` equals `"Smit
 
 ---
 
-###### 13. What are the three phases of event propagation?
+###### 13. 이 세개를 이벤트 전파(propagation)의 순서로 나열하면?
 
 - A: Target > Capturing > Bubbling
 - B: Bubbling > Target > Capturing
@@ -428,7 +428,7 @@ During the **capturing** phase, the event goes through the ancestor elements dow
 
 ---
 
-###### 14. All object have prototypes.
+###### 14. 모든 object는 prototype(들)을 갖는다.
 
 - A: true
 - B: false
@@ -633,7 +633,7 @@ With `"use strict"`, you can make sure that you don't accidentally declare globa
 
 ---
 
-###### 21. What's value of `sum`?
+###### 21. `sum`값은?
 
 ```javascript
 const sum = eval("10*10+5");
@@ -656,7 +656,7 @@ const sum = eval("10*10+5");
 
 ---
 
-###### 22. How long is cool_secret accessible?
+###### 22. 언제까지 cool_secret에 접근할 수 있을까?
 
 ```javascript
 sessionStorage.setItem("cool_secret", 123);
@@ -764,7 +764,7 @@ If you have two keys with the same name, the key will be replaced. It will still
 
 ---
 
-###### 26. The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.
+###### 26. 자바스크립트 전역 실행 컨텍스트는 global object와 `this`를 만들어 준다.
 
 - A: true
 - B: false
@@ -924,7 +924,7 @@ This is where an event loop starts to work. An **event loop** looks at the stack
 
 ---
 
-###### 31. What is the event.target when clicking the button?
+###### 31. 버튼을 클릭했을 때 `event.target`은 무엇인가?
 
 ```html
 <div onclick="console.log('first div')">
@@ -1168,12 +1168,12 @@ Outside of the `catch` block, `x` is still `undefined`, and `y` is `2`. When we 
 
 ---
 
-###### 39. Everything in JavaScript is either a...
+###### 39. 자바스크립트에서 모든 것은..
 
-- A: primitive or object
-- B: function or object
-- C: trick question! only objects
-- D: number or object
+- A: primitive 혹은 object다.
+- B: function 혹은 object다.
+- C: 질문이 트릭이네! object뿐이다.
+- D: number 혹은 object다.
 
 <details><summary><b>정답 확인</b></summary>
 <p>
@@ -1250,7 +1250,7 @@ Then, `[1, 2, 0, 1]` is `acc` and `[2, 3]` is `cur`. We concatenate them, and ge
 
 ---
 
-###### 42. What does the `setInterval` method return in the browser?
+###### 42. 브라우저에서 `setInterval`메서드를 실행할 경우 무엇이 return 되는가?
 
 ```javascript
 setInterval(() => console.log("Hi"), 1000);
@@ -1273,7 +1273,7 @@ It returns a unique id. This id can be used to clear that interval with the `cle
 
 ---
 
-###### 43. What does this return?
+###### 43. 무엇이 return 되는가?
 
 ```javascript
 [..."Lydia"];
