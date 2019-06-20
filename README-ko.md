@@ -1,21 +1,21 @@
-# List of (Advanced) JavaScript Questions
+# 자바스크립트(advanced) 질문 리스트
 
-I post daily multiple choice JavaScript questions on my [Instagram](https://www.instagram.com/theavocoder), which I'll also post here!
+나는 이곳 뿐만 아니라 [인스타그램](https://www.instagram.com/theavocoder)에도 여러가지 자바스크립트 질문들을 선택해서 매일 포스팅 하고 있다.
 
-From basic to advanced: test how well you know JavaScript, refresh your knowledge a bit, or prepare for your coding interview! :muscle: :rocket: I update this repo weekly with new questions.
+기초에서부터 심화까지 여러 문제들을 풀어보면서 자바스크립트를 잘 알고 있는지 테스트 해보거나, 알고 있는 내용을 리마인드 할 수 있고, 또한 코딩 인터뷰도 준비할 수 있을 것이다. 💪🚀 이 저장소는 새로운 질문과 함께 주마다 업데이트 될 것이다!
 
-The answers are in the collapsed sections below the questions, simply click on them to expand it. Good luck :heart:
+답은 질문 밑 접혀있는 섹션에 존재하며, 클릭하여 펼쳐서 확인할 수 있다. 그럼 행운을 빈다! ❤️
 
 [中文版本](./README-zh_CN.md)  
 [Русский](./README_ru-RU.md)  
 [Western Balkan](./README-bs.md)  
 [Deutsch](./README-de_DE.md)  
 [Tiếng Việt](./README-vi.md)  
-[한국어](./README-ko.md)  
+[한국어](./README-ko.md)
 
 ---
 
-###### 1. What's the output?
+###### 1. 어떤 값이 출력되는가?
 
 ```javascript
 function sayHi() {
@@ -33,10 +33,10 @@ sayHi();
 - C: `ReferenceError` and `21`
 - D: `undefined` and `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: D
+#### 답: D
 
 Within the function, we first declare the `name` variable with the `var` keyword. This means that the variable gets hoisted (memory space is set up during the creation phase) with the default value of `undefined`, until we actually get to the line where we define the variable. We haven't defined the variable yet on the line where we try to log the `name` variable, so it still holds the value of `undefined`.
 
@@ -47,7 +47,7 @@ Variables with the `let` keyword (and `const`) are hoisted, but unlike `var`, do
 
 ---
 
-###### 2. What's the output?
+###### 2. 어떤 값이 출력되는가?
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -63,10 +63,10 @@ for (let i = 0; i < 3; i++) {
 - B: `0 1 2` and `3 3 3`
 - C: `3 3 3` and `0 1 2`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 Because of the event queue in JavaScript, the `setTimeout` callback function is called _after_ the loop has been executed. Since the variable `i` in the first loop was declared using the `var` keyword, this value was global. During the loop, we incremented the value of `i` by `1` each time, using the unary operator `++`. By the time the `setTimeout` callback function was invoked, `i` was equal to `3` in the first example.
 
@@ -77,7 +77,7 @@ In the second loop, the variable `i` was declared using the `let` keyword: varia
 
 ---
 
-###### 3. What's the output?
+###### 3. 어떤 값이 출력되는가?
 
 ```javascript
 const shape = {
@@ -97,10 +97,10 @@ shape.perimeter();
 - C: `20` and `63`
 - D: `NaN` and `63`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 Note that the value of `diameter` is a regular function, whereas the value of `perimeter` is an arrow function.
 
@@ -113,7 +113,7 @@ There is no value `radius` on that object, which returns `undefined`.
 
 ---
 
-###### 4. What's the output?
+###### 4. 어떤 값이 출력되는가?
 
 ```javascript
 +true;
@@ -124,10 +124,10 @@ There is no value `radius` on that object, which returns `undefined`.
 - B: `false` and `NaN`
 - C: `false` and `false`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 The unary plus tries to convert an operand to a number. `true` is `1`, and `false` is `0`.
 
@@ -138,7 +138,7 @@ The string `'Lydia'` is a truthy value. What we're actually asking, is "is this 
 
 ---
 
-###### 5. Which one is true?
+###### 5. 올바른 문장은?
 
 ```javascript
 const bird = {
@@ -156,10 +156,10 @@ const mouse = {
 - C: `mouse[bird["size"]]` is not valid
 - D: All of them are valid
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 In JavaScript, all object keys are strings (unless it's a Symbol). Even though we might not _type_ them as strings, they are always converted into strings under the hood.
 
@@ -174,9 +174,7 @@ However, with dot notation, this doesn't happen. `mouse` does not have a key cal
 
 ---
 
----
-
-###### 6. What's the output?
+###### 6. 어떤 값이 출력되는가?
 
 ```javascript
 let c = { greeting: "Hey!" };
@@ -193,10 +191,10 @@ console.log(d.greeting);
 - D: `ReferenceError`
 - E: `TypeError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 In JavaScript, all objects interact by _reference_ when setting them equal to each other.
 
@@ -211,7 +209,7 @@ When you change one object, you change all of them.
 
 ---
 
-###### 7. What's the output?
+###### 7. 어떤 값이 출력되는가?
 
 ```javascript
 let a = 3;
@@ -228,10 +226,10 @@ console.log(b === c);
 - C: `true` `false` `false`
 - D: `false` `true` `true`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 `new Number()` is a built-in function constructor. Although it looks like a number, it's not really a number: it has a bunch of extra features and is an object.
 
@@ -244,7 +242,7 @@ However, when we use the `===` operator, both value _and_ type should be the sam
 
 ---
 
-###### 8. What's the output?
+###### 8. 어떤 값이 출력되는가?
 
 ```javascript
 class Chameleon {
@@ -267,10 +265,10 @@ freddie.colorChange("orange");
 - C: `green`
 - D: `TypeError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: D
+#### 답: D
 
 The `colorChange` function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children. Since `freddie` is a child, the function is not passed down, and not available on the `freddie` instance: a `TypeError` is thrown.
 
@@ -279,7 +277,7 @@ The `colorChange` function is static. Static methods are designed to live only o
 
 ---
 
-###### 9. What's the output?
+###### 9. 어떤 값이 출력되는가?
 
 ```javascript
 let greeting;
@@ -291,10 +289,10 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 It logs the object, because we just created an empty object on the global object! When we mistyped `greeting` as `greetign`, the JS interpreter actually saw this as `global.greetign = {}` (or `window.greetign = {}` in a browser).
 
@@ -320,10 +318,10 @@ bark.animal = "dog";
 - C: `undefined`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 This is possible in JavaScript, because functions are objects! (Everything besides primitive types are objects)
 
@@ -334,7 +332,7 @@ A function is a special type of object. The code you write yourself isn't the ac
 
 ---
 
-###### 11. What's the output?
+###### 11. 어떤 값이 출력되는가?
 
 ```javascript
 function Person(firstName, lastName) {
@@ -355,10 +353,10 @@ console.log(member.getFullName());
 - C: `Lydia Hallie`
 - D: `undefined` `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 You can't add properties to a constructor like you can with regular objects. If you want to add a feature to all objects at once, you have to use the prototype instead. So in this case,
 
@@ -375,7 +373,7 @@ would have made `member.getFullName()` work. Why is this beneficial? Say that we
 
 ---
 
-###### 12. What's the output?
+###### 12. 어떤 값이 출력되는가?
 
 ```javascript
 function Person(firstName, lastName) {
@@ -395,10 +393,10 @@ console.log(sarah);
 - C: `Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`
 - D:`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 For `sarah`, we didn't use the `new` keyword. When using `new`, it refers to the new empty object we create. However, if you don't add `new` it refers to the **global object**!
 
@@ -416,10 +414,10 @@ We said that `this.firstName` equals `"Sarah"` and `this.lastName` equals `"Smit
 - C: Target > Bubbling > Capturing
 - D: Capturing > Target > Bubbling
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: D
+#### 답: D
 
 During the **capturing** phase, the event goes through the ancestor elements down to the target element. It then reaches the **target** element, and **bubbling** begins.
 
@@ -435,10 +433,10 @@ During the **capturing** phase, the event goes through the ancestor elements dow
 - A: true
 - B: false
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 All objects have prototypes, except for the **base object**. The base object has access to some methods and properties, such as `.toString`. This is the reason why you can use built-in JavaScript methods! All of such methods are available on the prototype. Although JavaScript can't find it directly on your object, it goes down the prototype chain and finds it there, which makes it accessible for you.
 
@@ -447,7 +445,7 @@ All objects have prototypes, except for the **base object**. The base object has
 
 ---
 
-###### 15. What's the output?
+###### 15. 어떤 값이 출력되는가?
 
 ```javascript
 function sum(a, b) {
@@ -462,10 +460,10 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 JavaScript is a **dynamically typed language**: we don't specify what types certain variables are. Values can automatically be converted into another type without you knowing, which is called _implicit type coercion_. **Coercion** is converting from one type into another.
 
@@ -476,7 +474,7 @@ In this example, JavaScript converts the number `1` into a string, in order for 
 
 ---
 
-###### 16. What's the output?
+###### 16. 어떤 값이 출력되는가?
 
 ```javascript
 let number = 0;
@@ -490,10 +488,10 @@ console.log(number);
 - C: `0` `2` `2`
 - D: `0` `1` `2`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 The **postfix** unary operator `++`:
 
@@ -512,7 +510,7 @@ This returns `0 2 2`.
 
 ---
 
-###### 17. What's the output?
+###### 17. 어떤 값이 출력되는가?
 
 ```javascript
 function getPersonInfo(one, two, three) {
@@ -531,10 +529,10 @@ getPersonInfo`${person} is ${age} years old`;
 - B: `["", " is ", " years old"]` `"Lydia"` `21`
 - C: `"Lydia"` `["", " is ", " years old"]` `21`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 If you use tagged template literals, the value of the first argument is always an array of the string values. The remaining arguments get the values of the passed expressions!
 
@@ -543,7 +541,7 @@ If you use tagged template literals, the value of the first argument is always a
 
 ---
 
-###### 18. What's the output?
+###### 18. 어떤 값이 출력되는가?
 
 ```javascript
 function checkAge(data) {
@@ -563,10 +561,10 @@ checkAge({ age: 18 });
 - B: `You are still an adult.`
 - C: `Hmm.. You don't have an age I guess`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 When testing equality, primitives are compared by their _value_, while objects are compared by their _reference_. JavaScript checks if the objects have a reference to the same location in memory.
 
@@ -579,7 +577,7 @@ This is why both `{ age: 18 } === { age: 18 }` and `{ age: 18 } == { age: 18 }` 
 
 ---
 
-###### 19. What's the output?
+###### 19. 어떤 값이 출력되는가?
 
 ```javascript
 function getAge(...args) {
@@ -594,10 +592,10 @@ getAge(21);
 - C: `"object"`
 - D: `"NaN"`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 The spread operator (`...args`.) returns an array with arguments. An array is an object, so `typeof args` returns `"object"`
 
@@ -606,7 +604,7 @@ The spread operator (`...args`.) returns an array with arguments. An array is an
 
 ---
 
-###### 20. What's the output?
+###### 20. 어떤 값이 출력되는가?
 
 ```javascript
 function getAge() {
@@ -623,10 +621,10 @@ getAge();
 - C: `ReferenceError`
 - D: `TypeError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 With `"use strict"`, you can make sure that you don't accidentally declare global variables. We never declared the variable `age`, and since we use `"use strict"`, it will throw a reference error. If we didn't use `"use strict"`, it would have worked, since the property `age` would have gotten added to the global object.
 
@@ -646,10 +644,10 @@ const sum = eval("10*10+5");
 - C: `TypeError`
 - D: `"10*10+5"`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 `eval` evaluates codes that's passed as a string. If it's an expression, like in this case, it evaluates the expression. The expression is `10 * 10 + 5`. This returns the number `105`.
 
@@ -669,10 +667,10 @@ sessionStorage.setItem("cool_secret", 123);
 - C: When the user closes the entire browser, not only the tab.
 - D: When the user shuts off their computer.
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 The data stored in `sessionStorage` is removed after closing the _tab_.
 
@@ -683,7 +681,7 @@ If you used `localStorage`, the data would've been there forever, unless for exa
 
 ---
 
-###### 23. What's the output?
+###### 23. 어떤 값이 출력되는가?
 
 ```javascript
 var num = 8;
@@ -697,10 +695,10 @@ console.log(num);
 - C: `SyntaxError`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 With the `var` keyword, you can declare multiple variables with the same name. The variable will then hold the latest value.
 
@@ -711,7 +709,7 @@ You cannot do this with `let` or `const` since they're block-scoped.
 
 ---
 
-###### 24. What's the output?
+###### 24. 어떤 값이 출력되는가?
 
 ```javascript
 const obj = { 1: "a", 2: "b", 3: "c" };
@@ -728,10 +726,10 @@ set.has(1);
 - C: `true` `true` `false` `true`
 - D: `true` `true` `true` `true`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 All object keys (excluding Symbols) are strings under the hood, even if you don't type it yourself as a string. This is why `obj.hasOwnProperty('1')` also returns true.
 
@@ -742,7 +740,7 @@ It doesn't work that way for a set. There is no `'1'` in our set: `set.has('1')`
 
 ---
 
-###### 25. What's the output?
+###### 25. 어떤 값이 출력되는가?
 
 ```javascript
 const obj = { a: "one", b: "two", a: "three" };
@@ -754,10 +752,10 @@ console.log(obj);
 - C: `{ a: "three", b: "two" }`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 If you have two keys with the same name, the key will be replaced. It will still be in its first position, but with the last specified value.
 
@@ -772,10 +770,10 @@ If you have two keys with the same name, the key will be replaced. It will still
 - B: false
 - C: it depends
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 The base execution context is the global execution context: it's what's accessible everywhere in your code.
 
@@ -784,7 +782,7 @@ The base execution context is the global execution context: it's what's accessib
 
 ---
 
-###### 27. What's the output?
+###### 27. 어떤 값이 출력되는가?
 
 ```javascript
 for (let i = 1; i < 5; i++) {
@@ -798,10 +796,10 @@ for (let i = 1; i < 5; i++) {
 - C: `1` `2` `4`
 - D: `1` `3` `4`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 The `continue` statement skips an iteration if a certain condition returns `true`.
 
@@ -810,7 +808,7 @@ The `continue` statement skips an iteration if a certain condition returns `true
 
 ---
 
-###### 28. What's the output?
+###### 28. 어떤 값이 출력되는가?
 
 ```javascript
 String.prototype.giveLydiaPizza = () => {
@@ -827,10 +825,10 @@ name.giveLydiaPizza();
 - C: `SyntaxError`
 - D: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 `String` is a built-in constructor, which we can add properties to. I just added a method to its prototype. Primitive strings are automatically converted into a string object, generated by the string prototype function. So, all strings (string objects) have access to that method!
 
@@ -839,7 +837,7 @@ name.giveLydiaPizza();
 
 ---
 
-###### 29. What's the output?
+###### 29. 어떤 값이 출력되는가?
 
 ```javascript
 const a = {};
@@ -857,10 +855,10 @@ console.log(a[b]);
 - C: `undefined`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 Object keys are automatically converted into strings. We are trying to set an object as a key to object `a`, with the value of `123`.
 
@@ -873,7 +871,7 @@ Then, we log `a[b]`, which is actually `a["Object object"]`. We just set that to
 
 ---
 
-###### 30. What's the output?
+###### 30. 어떤 값이 출력되는가?
 
 ```javascript
 const foo = () => console.log("First");
@@ -890,10 +888,10 @@ baz();
 - C: `Second` `First` `Third`
 - D: `Second` `Third` `First`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 We have a `setTimeout` function and invoked it first. Yet, it was logged last.
 
@@ -943,10 +941,10 @@ This is where an event loop starts to work. An **event loop** looks at the stack
 - C: `button`
 - D: An array of all nested elements.
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 The deepest nested element that caused the event is the target of the event. You can stop bubbling by `event.stopPropagation`
 
@@ -970,10 +968,10 @@ The deepest nested element that caused the event is the target of the event. You
 - C: `p`
 - D: `div`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 If we click `p`, we see two logs: `p` and `div`. During event propagation, there are 3 phases: capturing, target, and bubbling. By default, event handlers are executed in the bubbling phase (unless you set `useCapture` to `true`). It goes from the deepest nested element outwards.
 
@@ -982,7 +980,7 @@ If we click `p`, we see two logs: `p` and `div`. During event propagation, there
 
 ---
 
-###### 33. What's the output?
+###### 33. 어떤 값이 출력되는가?
 
 ```javascript
 const person = { name: "Lydia" };
@@ -1000,10 +998,10 @@ sayHi.bind(person, 21);
 - C: `Lydia is 21` `Lydia is 21`
 - D: `Lydia is 21` `function`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: D
+#### 답: D
 
 With both, we can pass the object to which we want the `this` keyword to refer to. However, `.call` is also _executed immediately_!
 
@@ -1014,7 +1012,7 @@ With both, we can pass the object to which we want the `this` keyword to refer t
 
 ---
 
-###### 34. What's the output?
+###### 34. 어떤 값이 출력되는가?
 
 ```javascript
 function sayHi() {
@@ -1029,10 +1027,10 @@ typeof sayHi();
 - C: `"function"`
 - D: `"undefined"`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 The `sayHi` function returns the returned value of the immediately invoked function (IIFE). This function returned `0`, which is type `"number"`.
 
@@ -1059,10 +1057,10 @@ undefined;
 - C: `0`, `''`, `new Boolean(false)`, `undefined`
 - D: All of them are falsy
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 There are only six falsy values:
 
@@ -1080,7 +1078,7 @@ Function constructors, like `new Number` and `new Boolean` are truthy.
 
 ---
 
-###### 36. What's the output?
+###### 36. 어떤 값이 출력되는가?
 
 ```javascript
 console.log(typeof typeof 1);
@@ -1091,10 +1089,10 @@ console.log(typeof typeof 1);
 - C: `"object"`
 - D: `"undefined"`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 `typeof 1` returns `"number"`.
 `typeof "number"` returns `"string"`
@@ -1104,7 +1102,7 @@ console.log(typeof typeof 1);
 
 ---
 
-###### 37. What's the output?
+###### 37. 어떤 값이 출력되는가?
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -1117,10 +1115,10 @@ console.log(numbers);
 - C: `[1, 2, 3, 7 x empty, 11]`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 When you set a value to an element in an array that exceeds the length of the array, JavaScript creates something called "empty slots". These actually have the value of `undefined`, but you will see something like:
 
@@ -1133,7 +1131,7 @@ depending on where you run it (it's different for every browser, node, etc.)
 
 ---
 
-###### 38. What's the output?
+###### 38. 어떤 값이 출력되는가?
 
 ```javascript
 (() => {
@@ -1154,10 +1152,10 @@ depending on where you run it (it's different for every browser, node, etc.)
 - C: `1` `1` `2`
 - D: `1` `undefined` `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 The `catch` block receives the argument `x`. This is not the same `x` as the variable when we pass arguments. This variable `x` is block-scoped.
 
@@ -1177,10 +1175,10 @@ Outside of the `catch` block, `x` is still `undefined`, and `y` is `2`. When we 
 - C: trick question! only objects
 - D: number or object
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 JavaScript only has primitive types and objects.
 
@@ -1193,7 +1191,7 @@ What differentiates a primitive from an object is that primitives do not have an
 
 ---
 
-###### 40. What's the output?
+###### 40. 어떤 값이 출력되는가?
 
 ```javascript
 [[0, 1], [2, 3]].reduce(
@@ -1209,10 +1207,10 @@ What differentiates a primitive from an object is that primitives do not have an
 - C: `[1, 2, 0, 1, 2, 3]`
 - D: `[1, 2, 6]`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: C
+#### 답: C
 
 `[1, 2]` is our initial value. This is the value we start with, and the value of the very first `acc`. During the first round, `acc` is `[1,2]`, and `cur` is `[0, 1]`. We concatenate them, which results in `[1, 2, 0, 1]`.
 
@@ -1223,7 +1221,7 @@ Then, `[1, 2, 0, 1]` is `acc` and `[2, 3]` is `cur`. We concatenate them, and ge
 
 ---
 
-###### 41. What's the output?
+###### 41. 어떤 값이 출력되는가?
 
 ```javascript
 !!null;
@@ -1236,10 +1234,10 @@ Then, `[1, 2, 0, 1]` is `acc` and `[2, 3]` is `cur`. We concatenate them, and ge
 - C: `false` `true` `true`
 - D: `true` `true` `false`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: B
+#### 답: B
 
 `null` is falsy. `!null` returns `true`. `!true` returns `false`.
 
@@ -1263,10 +1261,10 @@ setInterval(() => console.log("Hi"), 1000);
 - C: the passed function
 - D: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 It returns a unique id. This id can be used to clear that interval with the `clearInterval()` function.
 
@@ -1286,10 +1284,10 @@ It returns a unique id. This id can be used to clear that interval with the `cle
 - C: `[[], "Lydia"]`
 - D: `[["L", "y", "d", "i", "a"]]`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>정답 확인</b></summary>
 <p>
 
-#### Answer: A
+#### 답: A
 
 A string is an iterable. The spread operator maps every character of an iterable to one element.
 
