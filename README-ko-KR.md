@@ -11,7 +11,7 @@
 [Western Balkan](./README-bs.md)  
 [Deutsch](./README-de_DE.md)  
 [Tiếng Việt](./README-vi.md)  
-[한국어](./README-ko.md)
+[한국어](./README-ko-KR.md)
 
 ---
 
