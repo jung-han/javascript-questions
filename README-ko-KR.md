@@ -313,8 +313,8 @@ function bark() {
 bark.animal = "dog";
 ```
 
-- A: Nothing, this is totally fine!
-- B: `SyntaxError`. You cannot add properties to a function this way.
+- A: 아무일도 발생하지 않는다! 
+- B: `SyntaxError`. 이런 방식으로 함수에 property를 추가할 수 없다.
 - C: `undefined`
 - D: `ReferenceError`
 
@@ -662,10 +662,10 @@ const sum = eval("10*10+5");
 sessionStorage.setItem("cool_secret", 123);
 ```
 
-- A: Forever, the data doesn't get lost.
-- B: When the user closes the tab.
-- C: When the user closes the entire browser, not only the tab.
-- D: When the user shuts off their computer.
+- A: 영원히. 데이터는 사라지지 않는다.
+- B: 유저가 탭을 닫을 때
+- C: 탭이 아닌, 전체 브라우저를 종료할 때
+- D: 컴퓨터를 종료할 때까지
 
 <details><summary><b>정답 확인</b></summary>
 <p>
@@ -936,10 +936,10 @@ This is where an event loop starts to work. An **event loop** looks at the stack
 </div>
 ```
 
-- A: Outer `div`
-- B: Inner `div`
+- A: `div` 바깥쪽
+- B: `div` 안쪽
 - C: `button`
-- D: An array of all nested elements.
+- D: 모든 중첩된 엘리먼트들의 배열
 
 <details><summary><b>정답 확인</b></summary>
 <p>
@@ -1257,8 +1257,8 @@ setInterval(() => console.log("Hi"), 1000);
 ```
 
 - A: a unique id
-- B: the amount of milliseconds specified
-- C: the passed function
+- B: 몇 ms를 설정했는지
+- C: 실행될 함수
 - D: `undefined`
 
 <details><summary><b>정답 확인</b></summary>
